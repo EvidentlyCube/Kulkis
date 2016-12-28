@@ -1,0 +1,207 @@
+key8=Backspace
+key9=Tab
+key13=Enter
+key16=Shift
+key17=Control
+key18=Alt
+key19=Pause/Brk
+key20=Caps Lock
+key27=Escape
+key32=Space
+key33=Page Up
+key34=Page Down
+key35=End
+key36=Home
+key37=Left
+key38=Up
+key39=Right
+key40=Down
+key45=Insert
+key46=Delete
+key48=0
+key49=1
+key50=2
+key51=3
+key52=4
+key53=5
+key54=6
+key55=7
+key56=8
+key57=9
+key65=A
+key66=B
+key67=C
+key68=D
+key69=E
+key70=F
+key71=G
+key72=H
+key73=I
+key74=J
+key75=K
+key76=L
+key77=M
+key78=N
+key79=O
+key80=P
+key81=Q
+key82=R
+key83=S
+key84=T
+key85=U
+key86=V
+key87=W
+key88=X
+key89=Y
+key90=Z
+key91=L.Win/Cmd
+key92=R.Win
+key93=Menu
+key96=Numpad 0
+key97=Numpad 1
+key98=Numpad 2
+key99=Numpad 3
+key100=Numpad 4
+key101=Numpad 5
+key102=Numpad 6
+key103=Numpad 7
+key104=Numpad 8
+key105=Numpad 9
+key106=Numpad *
+key107=Numpad +
+key109=Numpad -
+key110=Numpad .
+key111=Numpad /
+key112=F1
+key113=F2
+key114=F3
+key115=F4
+key116=F5
+key117=F6
+key118=F7
+key119=F8
+key120=F9
+key121=F10
+key122=F11
+key123=F12
+key124=F13
+key125=F14
+key126=F15
+key144=Numlock
+key145=Scroll Lock
+key186=;
+key187==
+key188=,
+key189=-
+key190=.
+key191=/
+key192=~
+key219=[
+key220=\
+key221=]
+key222='
+
+keyLeftDesc=Move Left
+keyRightDesc=Move Right
+keyAccelerateDesc=Accelerate
+keyDecelerateDesc=Decelerate
+keySoundDesc=Toggle Sounds
+keyMusicDesc=Toggle Music
+ 
+choseLanguage=Please select language:
+
+preloadTitle=KULKIS
+preloadDesc=A finger-bending game about destroying colorful blocks
+
+Start Game=Start Game
+Continue=Continue
+Options=Options
+Credits=Credits
+Options=Options
+Close=Close
+Hiscores=Hiscores
+
+Game by=Game by
+RETROCADE.net=RETROCADE.net
+Programming=Programming
+Maurycy Zarzycki=Maurycy Zarzycki
+Graphics=Graphics
+Aleksander Kowalczyk=Aleksander Kowalczyk
+Music=Music
+Sound Effects=Sound Effects
+Various Resources=Various Resources
+MusicCredit=XTD / MYSTIC///
+	Facet (Martijn van MEEL)
+SfxCredit=SFXR (Tomas Pettersson)
+Translations=Translations
+EN - Chris Allcock=EN - Chris Allcock
+PL - Maurycy Zarzycki=PL - Maurycy Zarzycki
+DE - Magnus Halbe=DE - Magnus Halbe
+NL - Sabatino Masala=NL - Sabatino Masala
+PT-BR - Daniel Sidhion=PT-BR - Daniel Sidhion
+ZH - Landily=ZH - Landily
+
+Game is Paused=The Game is Paused
+Return to Game=Continue Playing
+Restart=Restart Level
+Return to Title Screen=Return to Title Screen
+Pause - Game lost focus=Pause - The game has lost focus
+Click to continue=Click on the game to continue
+
+help1=Destroy blocks of your color by hitting them from the top or bottom.\nClear them all to open the exit.
+help2=Hit the oil-like block to change your Kulkis to its colour.
+help3=Avoid touching spikes! This will cost you a life. When you run out of lives it's game over.
+help4=Hit %% and %% to make the Kulkis bounce faster or slower.
+
+Hit Space to skip intro=Hit Space to skip intro
+
+intro1=Far away, in a different land lies
+intro2=the place where Kulkises live.
+
+intro3=These small creatures have no limbs
+intro4=but their body, and all they use is
+intro5=the power of their minds.
+
+intro6=Once, a young Kulkis had entered a
+intro7=dark, scary and quite gruesome cave.
+
+intro8=Not seeing much he fell into a deep pit,
+intro9=and after a moment he hit the bottom...
+
+introA=...but he bounced off it safely!
+
+introB=Without much choice he began his search
+introC=to find a way out of this awful place!
+
+
+
+outro1=After many dangerous rooms
+outro2=he finally reached the end.
+
+outro3=In the last chamber he is greeted by
+outro4=the smiling face of a Kulkis...
+
+outro5=a Kulkis who had left their tribe 
+outro6=long ago and now, apparently, came back!
+
+outro7=CONGRATULATIONS!
+
+outro8=You have completed the game!
+
+outro9=Thank you for playing!
+
+outroA=Hit Space to continue
+
+Start Warning=You will lose\nyour progress if\nyou choose this option!
+Continue Warning=Start from last played\nlevel and zero score.
+Click loses progress=Clicking this option will\nmake you lose all your progress!
+
+Level:=Level:
+Points:=Points:
+GAME OVER=GAME OVER
+
+scoreView=Please wait... Connecting!
+scoreSend=Please wait... Sending score!
+
+Walkthrough=Walkthrough
+helpTooltip=(English Only)\nGet help for the currently\nplayed level on Retrocade.net
