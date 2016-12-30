@@ -58,7 +58,7 @@ package game.global.levelList {
 
 		public function getLevel(id:int):ByteArray {
 			if (!_levels[id])
-				_levels[id] = new LevelListRegular['_level_' + id + '_'];
+				_levels[id] = new LevelListHard['_level_' + id + '_'];
 
 			ByteArray(_levels[id]).position = 0;
 			return _levels[id];

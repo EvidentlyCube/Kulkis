@@ -66,7 +66,7 @@ package game.global.preloader {
 
 			Pre.preCoreInit();
 
-			RetrocamelCore.initFlash(stage, this, S(), null);
+			RetrocamelCore.initFlash(stage, this, S());
 			Sfx.initialize();
 			Sfx.startGenerating(soundMakeFinished);
 			RetrocamelDisplayManager.setBackgroundColor(0);
