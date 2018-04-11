@@ -3,12 +3,12 @@
   <component name="FlexBuildConfigurationManager" active="Regular (DEBUG)">
     <configurations>
       <configuration name="Regular (DEBUG)" pure-as="true" main-class="game.global.preloader.Preloader" output-file="Kulkis_Regular_DEBUG.swf" output-folder="$MODULE_DIR$/bin">
-        <dependencies target-player="10.1">
-          <sdk name="flex_sdk_4.6.0_a_3.6" />
+        <dependencies target-player="29.0">
+          <sdk name="AirSDK" />
         </dependencies>
         <compiler-options>
           <map>
-            <entry key="compiler.define" value="CF::isRegular&#9;true&#10;CF::isHard&#9;false" />
+            <entry key="compiler.define" value="CF::debug&#9;true&#10;CF::air&#9;false" />
             <entry key="compiler.locale" value="en_US" />
           </map>
           <option name="resourceFilesMode" value="None" />
@@ -19,13 +19,13 @@
         <packaging-ios />
       </configuration>
       <configuration name="Regular (RELEASE)" pure-as="true" main-class="game.global.preloader.Preloader" output-file="Kulkis_Regular.swf" output-folder="$MODULE_DIR$/bin">
-        <dependencies target-player="10.1">
-          <sdk name="flex_sdk_4.6.0_a_3.6" />
+        <dependencies target-player="29.0">
+          <sdk name="AirSDK" />
         </dependencies>
         <compiler-options>
           <map>
-            <entry key="compiler.debug.swf" value="false" />
-            <entry key="compiler.define" value="CF::isRegular&#9;true&#10;CF::isHard&#9;false" />
+            <entry key="compiler.debug.swf" value="true" />
+            <entry key="compiler.define" value="CF::debug&#9;false&#10;CF::air&#9;false" />
             <entry key="compiler.locale" value="en_US" />
           </map>
           <option name="resourceFilesMode" value="None" />
@@ -35,36 +35,17 @@
         <packaging-android />
         <packaging-ios />
       </configuration>
-      <configuration name="Hard (DEBUG)" pure-as="true" main-class="game.global.preloader.Preloader" output-file="Kulkis_Hard_DEBUG.swf" output-folder="$MODULE_DIR$/bin">
-        <dependencies target-player="10.1">
-          <sdk name="flex_sdk_4.6.0_a_3.6" />
+      <configuration name="Regular (AIR)" target-platform="Desktop" pure-as="true" main-class="game.global.preloader.DesktopRunner" output-file="Regular_(AIR).swf" output-folder="$MODULE_DIR$/bin">
+        <dependencies>
+          <sdk name="AirSDK" />
         </dependencies>
         <compiler-options>
           <map>
-            <entry key="compiler.define" value="CF::isRegular&#9;false&#10;CF::isHard&#9;true" />
-            <entry key="compiler.locale" value="en_US" />
+            <entry key="compiler.debug.swf" value="true" />
+            <entry key="compiler.define" value="CF::debug&#9;false&#10;CF::air&#9;true" />
           </map>
-          <option name="resourceFilesMode" value="None" />
-          <option name="additionalOptions" value="-default-size=512,448 -optimize -default-background-color=0 -frame=ContentFrame,game.global.Main" />
         </compiler-options>
-        <packaging-air-desktop />
-        <packaging-android />
-        <packaging-ios />
-      </configuration>
-      <configuration name="Hard (RELEASE)" pure-as="true" main-class="game.global.preloader.Preloader" output-file="Kulkis_Hard.swf" output-folder="$MODULE_DIR$/bin">
-        <dependencies target-player="10.1">
-          <sdk name="flex_sdk_4.6.0_a_3.6" />
-        </dependencies>
-        <compiler-options>
-          <map>
-            <entry key="compiler.debug.swf" value="false" />
-            <entry key="compiler.define" value="CF::isRegular&#9;false&#10;CF::isHard&#9;true" />
-            <entry key="compiler.locale" value="en_US" />
-          </map>
-          <option name="resourceFilesMode" value="None" />
-          <option name="additionalOptions" value="-default-size=512,448 -optimize -default-background-color=0 -frame=ContentFrame,game.global.Main" />
-        </compiler-options>
-        <packaging-air-desktop />
+        <packaging-air-desktop use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/Main-app.xml" package-file-name="Regular_(AIR)" />
         <packaging-android />
         <packaging-ios />
       </configuration>
@@ -78,7 +59,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src.framework" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src.utils" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="flex_sdk_4.6.0_a_3.6" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="jdk" jdkName="AirSDK" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

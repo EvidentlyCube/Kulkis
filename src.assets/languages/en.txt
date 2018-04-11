@@ -114,15 +114,17 @@ preloadTitle=KULKIS
 preloadDesc=A finger-bending game about destroying colorful blocks
 
 Start Game=Start Game
+Start Game Hard=Kaizo Mode
 Continue=Continue
 Options=Options
 Credits=Credits
 Options=Options
 Close=Close
 Hiscores=Hiscores
+Quit=Quit
 
 Game by=Game by
-RETROCADE.net=RETROCADE.net
+RETROCADE.net=Evidently Cube
 Programming=Programming
 Maurycy Zarzycki=Maurycy Zarzycki
 Graphics=Graphics
@@ -130,16 +132,11 @@ Aleksander Kowalczyk=Aleksander Kowalczyk
 Music=Music
 Sound Effects=Sound Effects
 Various Resources=Various Resources
-MusicCredit=XTD / MYSTIC///
-	Facet (Martijn van MEEL)
+MusicCredit=RoccoW
 SfxCredit=SFXR (Tomas Pettersson)
 Translations=Translations
 EN - Chris Allcock=EN - Chris Allcock
 PL - Maurycy Zarzycki=PL - Maurycy Zarzycki
-DE - Magnus Halbe=DE - Magnus Halbe
-NL - Sabatino Masala=NL - Sabatino Masala
-PT-BR - Daniel Sidhion=PT-BR - Daniel Sidhion
-ZH - Landily=ZH - Landily
 
 Game is Paused=The Game is Paused
 Return to Game=Continue Playing
@@ -150,7 +147,7 @@ Click to continue=Click on the game to continue
 
 help1=Destroy blocks of your color by hitting them from the top or bottom.\nClear them all to open the exit.
 help2=Hit the oil-like block to change your Kulkis to its colour.
-help3=Avoid touching spikes! This will cost you a life. When you run out of lives it's game over.
+help3=Avoid touching spikes! This will cost you a life.
 help4=Hit %% and %% to make the Kulkis bounce faster or slower.
 
 Hit Space to skip intro=Hit Space to skip intro
@@ -173,6 +170,24 @@ introA=...but he bounced off it safely!
 introB=Without much choice he began his search
 introC=to find a way out of this awful place!
 
+intro1k=Far away, in a different land lies
+intro2k=the place where Kulkises live.
+
+intro3k=These small creatures have no limbs
+intro4k=but their body, and all they use is
+intro5k=the power of their minds.
+
+intro6k=Once, a young Kulkis had entered a
+intro7k=dark, scary and quite gruesome cave.
+
+intro8k=Not seeing much he fell into a deep pit,
+intro9k=and after a moment he hit the bottom...
+
+introAk=...but it was spikes!
+
+introBk=Good luck playing the Kaizo mode!
+introCk=It's really, really, really hard.
+
 
 
 outro1=After many dangerous rooms
@@ -192,6 +207,23 @@ outro9=Thank you for playing!
 
 outroA=Hit Space to continue
 
+outro1k=It seems you're made from a much
+outro2k=tougher material than others.
+
+outro3k=You are one of those people who
+outro4k=want the world to beat them
+
+outro5k=just to prove they can
+outro6k=come out alive.
+
+outro7k=CONGRATULATIONS!
+
+outro8k=You have completed the Kaizo mode!
+
+outro9k=Thank you for playing!
+
+outroAk=Hit Space to continue
+
 Start Warning=You will lose\nyour progress if\nyou choose this option!
 Continue Warning=Start from last played\nlevel and zero score.
 Click loses progress=Clicking this option will\nmake you lose all your progress!
@@ -205,3 +237,5 @@ scoreSend=Please wait... Sending score!
 
 Walkthrough=Walkthrough
 helpTooltip=(English Only)\nGet help for the currently\nplayed level on Retrocade.net
+
+loading=Loading

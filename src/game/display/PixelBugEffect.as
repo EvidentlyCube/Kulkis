@@ -1,67 +1,67 @@
 package game.display {
-	import net.retrocade.retrocamel.components.RetrocamelUpdatableObject;
-	import net.retrocade.retrocamel.display.layers.RetrocamelLayerFlashBlit;
+import net.retrocade.retrocamel.components.RetrocamelUpdatableObject;
+import net.retrocade.retrocamel.display.layers.RetrocamelLayerFlashBlit;
 
-	public class PixelBugEffect extends RetrocamelUpdatableObject {
+public class PixelBugEffect extends RetrocamelUpdatableObject {
 
-		private var _rightEdge:int = 0;
-		private var _bottomEdge:int = 0;
+    private var _rightEdge:int = 0;
+    private var _bottomEdge:int = 0;
 
-		private var _layer:RetrocamelLayerFlashBlit;
+    private var _layer:RetrocamelLayerFlashBlit;
 
-		private var _dir:Number = 0;
-		private var _spd:Number;
+    private var _dir:Number = 0;
+    private var _spd:Number;
 
-		private var _colorLight:uint;
-		private var _colorPath:uint;
+    private var _colorLight:uint;
+    private var _colorPath:uint;
 
-		private var x:Number;
-		private var y:Number;
+    private var x:Number;
+    private var y:Number;
 
-		public function PixelBugEffect(layerToDraw:RetrocamelLayerFlashBlit, edgeRight:int, edgeBottom:int, spd:Number, colorLight:uint = 0xFFAAAAAA, colorDark:uint = 0xFF222222) {
-			_layer = layerToDraw;
-			_rightEdge = edgeRight;
-			_bottomEdge = edgeBottom;
-			_spd = spd;
-			_colorLight = colorLight;
-			_colorPath = colorDark;
+    public function PixelBugEffect(layerToDraw:RetrocamelLayerFlashBlit, edgeRight:int, edgeBottom:int, spd:Number, colorLight:uint = 0xFFAAAAAA, colorDark:uint = 0xFF222222) {
+        _layer = layerToDraw;
+        _rightEdge = edgeRight;
+        _bottomEdge = edgeBottom;
+        _spd = spd;
+        _colorLight = colorLight;
+        _colorPath = colorDark;
 
-			x = Math.random() * _rightEdge;
-			y = Math.random() * _bottomEdge;
+        x = Math.random() * _rightEdge;
+        y = Math.random() * _bottomEdge;
 
-			_dir = (Math.random() * 4 | 0) * Math.PI / 2;
+        _dir = (Math.random() * 4 | 0) * Math.PI / 2;
 
-			addDefault();
-		}
+        addDefault();
+    }
 
-		override public function update():void {
+    override public function update():void {
 
-			var _spdStep:Number = _spd;
-			var _spdMod:Number = _spdStep > 1 ? 1 : _spdStep;
-			var dirX:Number = Math.cos(_dir);
-			var dirY:Number = Math.sin(_dir);
+        var _spdStep:Number = _spd;
+        var _spdMod:Number = _spdStep > 1 ? 1 : _spdStep;
+        var dirX:Number = Math.cos(_dir);
+        var dirY:Number = Math.sin(_dir);
 
-			while (_spdStep > 0) {
-				_layer.plot(x, y, _colorPath);
+        while (_spdStep > 0) {
+            _layer.plot(x, y, _colorPath);
 
-				x += dirX * _spdMod;
-				y += dirY * _spdMod;
+            x += dirX * _spdMod;
+            y += dirY * _spdMod;
 
-				_spdMod = _spdStep > 1 ? 1 : _spdStep;
-				_spdStep -= _spdMod;
-			}
+            _spdMod = _spdStep > 1 ? 1 : _spdStep;
+            _spdStep -= _spdMod;
+        }
 
-			if (Math.random() < 0.01) {
-				_dir += (Math.random() * 3 | 0 - 1) * Math.PI / 2;
-			}
+        if (Math.random() < 0.01) {
+            _dir += (Math.random() * 3 | 0 - 1) * Math.PI / 2;
+        }
 
-			_layer.plot(x, y, _colorLight);
+        _layer.plot(x, y, _colorLight);
 
-			if (x < 0) x += _rightEdge;
-			if (y < 0) y += _bottomEdge;
+        if (x < 0) x += _rightEdge;
+        if (y < 0) y += _bottomEdge;
 
-			if (x > _rightEdge)  x -= _rightEdge;
-			if (y > _bottomEdge) y -= _bottomEdge;
-		}
-	}
+        if (x > _rightEdge) x -= _rightEdge;
+        if (y > _bottomEdge) y -= _bottomEdge;
+    }
+}
 }

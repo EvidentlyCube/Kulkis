@@ -1,137 +1,139 @@
 package game.global.preloader {
-	import flash.display.DisplayObject;
-	import flash.display.MovieClip;
-	import flash.display.StageAlign;
-	import flash.display.StageScaleMode;
-	import flash.events.Event;
-	import flash.utils.getDefinitionByName;
-	import flash.utils.getTimer;
+import flash.display.DisplayObject;
+import flash.display.MovieClip;
+import flash.display.Sprite;
+import flash.display.StageAlign;
+import flash.display.StageScaleMode;
+import flash.events.Event;
+import flash.utils.getDefinitionByName;
+import flash.utils.getTimer;
 
-	import game.global.Pre;
-	import game.global.Sfx;
-	import game.states.TStateLang;
-	import game.states.TStatePreload;
+import game.global.Pre;
+import game.global.Sfx;
+import game.states.TStateLang;
+import game.states.TStatePreload;
 
-	import net.retrocade.retrocamel.core.RetrocamelCore;
-	import net.retrocade.retrocamel.core.RetrocamelDisplayManager;
-	import net.retrocade.retrocamel.display.layers.RetrocamelLayerFlashBlit;
-	import net.retrocade.retrocamel.display.layers.RetrocamelLayerFlashSprite;
-	import net.retrocade.retrocamel.effects.RetrocamelEffectFadeScreen;
+import net.retrocade.retrocamel.core.RetrocamelCore;
+import net.retrocade.retrocamel.core.RetrocamelDisplayManager;
+import net.retrocade.retrocamel.display.layers.RetrocamelLayerFlashBlit;
+import net.retrocade.retrocamel.display.layers.RetrocamelLayerFlashSprite;
+import net.retrocade.retrocamel.effects.RetrocamelEffectFadeScreen;
 
-	/**
-	 * ...
-	 * @author Maurycy Zarzycki
-	 */
-	public class Preloader extends MovieClip {
-		public static var loaderLayer:RetrocamelLayerFlashSprite;
-		public static var loaderLayerBG:RetrocamelLayerFlashBlit;
+/**
+ * ...
+ * @author Maurycy Zarzycki
+ */
+public class Preloader extends MovieClip {
+    public static var loaderLayer:RetrocamelLayerFlashSprite;
+    public static var loaderLayerBG:RetrocamelLayerFlashBlit;
 
-		public static var percent:Number = 0;
+    public static var percent:Number = 0;
 
-		/****************************************************************************************************************/
-		/**                                                                                                  VARIABLES  */
-		/****************************************************************************************************************/
+    /****************************************************************************************************************/
+    /**                                                                                                  VARIABLES  */
+    /****************************************************************************************************************/
 
-		private var _afterAd:Boolean = false;
-		private var _afterLoad:Boolean = false;
+    private var _afterAd:Boolean = false;
+    private var _afterLoad:Boolean = false;
 
-		private var _startedAt:Number;
+    private var _startedAt:Number;
 
-		/****************************************************************************************************************/
-		/**                                                                                                  FUNCTIONS  */
-		/****************************************************************************************************************/
+    /****************************************************************************************************************/
+    /**                                                                                                  FUNCTIONS  */
 
-		public function Preloader() {
-			/*var lc:LocalConnection = new LocalConnection();
-			 if (lc.domain.indexOf("localhost") == -1 && 
-			 lc.domain.indexOf("flashgamelicense") == -1)
-			 return;
-			 /*
-			 if ((new Date).fullYear > 2011 || (new Date).month > 6 || (new Date).day > 31)
-			 return;
-			 */
+    /****************************************************************************************************************/
 
-			addEventListener(Event.ENTER_FRAME, init);
-		}
+    public function Preloader() {
+        /*var lc:LocalConnection = new LocalConnection();
+         if (lc.domain.indexOf("localhost") == -1 &&
+         lc.domain.indexOf("flashgamelicense") == -1)
+         return;
+         /*
+         if ((new Date).fullYear > 2011 || (new Date).month > 6 || (new Date).day > 31)
+         return;
+         */
 
-		private function init(e:Event):void {
-			if (!stage)
-				return;
+        addEventListener(Event.ENTER_FRAME, init);
+    }
 
-			removeEventListener(Event.ENTER_FRAME, init);
+    private function init(e:Event):void {
+        if (!stage)
+            return;
 
-			stage.scaleMode = StageScaleMode.NO_SCALE;
-			stage.align = StageAlign.TOP_LEFT;
-			stage.frameRate = 60;
+        removeEventListener(Event.ENTER_FRAME, init);
 
-			Pre.preCoreInit();
+        stage.scaleMode = StageScaleMode.NO_SCALE;
+        stage.align = StageAlign.TOP_LEFT;
+        stage.frameRate = 60;
 
-			RetrocamelCore.initFlash(stage, this, S());
-			Sfx.initialize();
-			Sfx.startGenerating(soundMakeFinished);
-			RetrocamelDisplayManager.setBackgroundColor(0);
+        Pre.preCoreInit();
 
-			Pre.init();
+        RetrocamelCore.initFlash(stage, this, S());
+        Sfx.initialize();
+        Sfx.startGenerating(soundMakeFinished);
+        RetrocamelDisplayManager.setBackgroundColor(0);
 
-			loaderLayerBG = new RetrocamelLayerFlashBlit();
-			loaderLayer = new RetrocamelLayerFlashSprite();
-			loaderLayerBG.setScale(2, 2);
+        Pre.init();
 
-			RetrocamelCore.setState(new TStatePreload());
+        loaderLayerBG = new RetrocamelLayerFlashBlit();
+        loaderLayer = new RetrocamelLayerFlashSprite();
+        loaderLayerBG.setScale(2, 2);
 
-			initLanguageSelection();
+        RetrocamelCore.setState(new TStatePreload());
 
-			addEventListener(Event.ENTER_FRAME, checkFrame);
+        initLanguageSelection();
 
-			_startedAt = getTimer();
-		}
+        addEventListener(Event.ENTER_FRAME, checkFrame);
 
-		private function checkFrame(e:Event):void {
-			percent = stage.loaderInfo.bytesLoaded * 100 / stage.loaderInfo.bytesTotal;
-			if (stage.loaderInfo.bytesLoaded >= stage.loaderInfo.bytesTotal) {
-				gotoAndStop(2);
-				removeEventListener(Event.ENTER_FRAME, checkFrame);
+        _startedAt = getTimer();
+    }
 
-				dispatchEvent(new Event("gameloaded", false, false));
+    private function checkFrame(e:Event):void {
+        percent = stage.loaderInfo.bytesLoaded * 100 / stage.loaderInfo.bytesTotal;
+        if (stage.loaderInfo.bytesLoaded >= stage.loaderInfo.bytesTotal) {
+            gotoAndStop(2);
+            removeEventListener(Event.ENTER_FRAME, checkFrame);
 
-				_afterLoad = true;
+            dispatchEvent(new Event("gameloaded", false, false));
 
-				if (_afterAd)
-					initLanguageSelection();
+            _afterLoad = true;
 
-			}
-		}
+            if (_afterAd)
+                initLanguageSelection();
 
-		private function initLanguageSelection():void {
-			if (!_afterLoad) {
-				_afterAd = true;
-				return;
-			}
+        }
+    }
 
-			RetrocamelEffectFadeScreen.makeOut().duration(500).callback(loadLanguagesState).run();
-		}
+    private function initLanguageSelection():void {
+        if (!_afterLoad) {
+            _afterAd = true;
+            return;
+        }
 
-		private function loadLanguagesState():void {
-			RetrocamelEffectFadeScreen.makeIn().duration(500).run();
+        RetrocamelEffectFadeScreen.makeOut().duration(500).callback(loadLanguagesState).run();
+    }
 
-			RetrocamelCore.setState(new TStateLang(startup));
-		}
+    private function loadLanguagesState():void {
+        RetrocamelEffectFadeScreen.makeIn().duration(500).run();
 
-		private function soundMakeFinished():void {
-			stage.frameRate = 60;
-		}
+        RetrocamelCore.setState(new TStateLang(loaderLayer.layer as Sprite, loaderLayerBG, startup));
+    }
 
-		public function startup():void {
-			loaderLayer.removeLayer();
-			loaderLayerBG.removeLayer();
+    private function soundMakeFinished():void {
+        stage.frameRate = 60;
+    }
 
-			stage.focus = stage;
+    public function startup():void {
+        loaderLayer.removeLayer();
+        loaderLayerBG.removeLayer();
 
-			var mainClass:Class = Class(getDefinitionByName("game.global.Main"));
-			addChild(new mainClass() as DisplayObject);
-			stage.frameRate = 60;
-		}
+        stage.focus = stage;
 
-	}
+        var mainClass:Class = Class(getDefinitionByName("game.global.Main"));
+        addChild(new mainClass() as DisplayObject);
+        stage.frameRate = 60;
+    }
 
-} 
+}
+
+}

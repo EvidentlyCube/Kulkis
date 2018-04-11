@@ -1,44 +1,52 @@
 package game.objects {
-	import flash.display.BitmapData;
+import flash.display.BitmapData;
 
-	import game.global.Game;
+import game.global.Game;
 
-	import net.retrocade.retrocamel.core.RetrocamelBitmapManager;
-	import net.retrocade.utils.UtilsObjects;
+import net.retrocade.constants.KeyConst;
 
-	/**
-	 * ...
-	 * @author
-	 */
-	public class TSpikes extends TGameObject {
-		[Embed(source="/../src.assets/sprites/spikes.png")]
-		public static var _gfx_spikes_:Class;
+import net.retrocade.retrocamel.core.RetrocamelBitmapManager;
+import net.retrocade.retrocamel.core.RetrocamelInputManager;
+import net.retrocade.utils.UtilsObjects;
 
-		private var _bd:BitmapData;
+/**
+ * ...
+ * @author
+ */
+public class TSpikes extends TGameObject {
+    [Embed(source="/../src.assets/sprites/spikes.png")]
+    public static var _gfx_spikes_:Class;
 
-		public function TSpikes(x:Number, y:Number) {
-			_x = x;
-			_y = y;
+    private var _bd:BitmapData;
+    private var _isDestroyed:Boolean;
 
-			_width = 16;
-			_height = 16;
+    public function TSpikes(x:Number, y:Number) {
+        _x = x;
+        _y = y;
 
-			_bd = RetrocamelBitmapManager.getBD(_gfx_spikes_);
+        _width = 16;
+        _height = 16;
 
-			addDefault();
+        _bd = RetrocamelBitmapManager.getBD(_gfx_spikes_);
 
-			update();
-		}
+        addDefault();
 
-		override public function update():void {
-			Game.lGame.draw(_bd, x, y);
+        update();
+    }
 
-			if (!player)
-				return;
+    override public function update():void {
+        if (_isDestroyed || RetrocamelInputManager.isKeyDown(KeyConst.F6)){
+            _isDestroyed = true;
+            return;
+        }
+        Game.lGame.draw(_bd, x, y);
 
-			if (UtilsObjects.distanceSquaredFromCenter(this, player) < 12 * 12) {
-				player.kill();
-			}
-		}
-	}
+        if (!player)
+            return;
+
+        if (UtilsObjects.distanceSquaredFromCenter(this, player) < 12 * 12) {
+            player.kill();
+        }
+    }
+}
 }

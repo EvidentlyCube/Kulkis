@@ -121,15 +121,17 @@ keyMusicDesc=Wyłącz Muzykę
 preloadTitle=KULKIS
 preloadDesc=Zręcznościówka o niszczeniu kolorowych bloczków
 
-Start Game=Start
+Start Game=Nowa gra
+Start Game Hard=Tryb Kaizo
 Continue=Kontynuuj
 Options=Opcje
 Credits=Twórcy
 Close=Zamknij
 Hiscores=Tabela wyników
+Quit=Wyjdź z gry
 
 Game by=Gra stworzona przez
-RETROCADE.net=RETROCADE.net
+RETROCADE.net=Evidently Cube
 Programming=Programowanie
 Maurycy Zarzycki=Maurycy Zarzycki
 Graphics=Grafika
@@ -137,16 +139,11 @@ Aleksander Kowalczyk=Aleksander Kowalczyk
 Music=Muzyka
 Sound Effects=Dźwięk
 Various Resources=Róźne źródła
-MusicCredit=XTD / MYSTIC///
-Facet (Martijn van MEEL)
+MusicCredit=RoccoW
 SfxCredit=SFXR (Tomas Pettersson)
 Translations=Tłumaczenia
 EN - Chris Allcock=EN - Chris Allcock
 PL - Maurycy Zarzycki=PL - Maurycy Zarzycki
-DE - Magnus Halbe=DE - Magnus Halbe
-NL - Sabatino Masala=NL - Sabatino Masala
-PT-BR - Daniel Sidhion=PT-BR - Daniel Sidhion
-ZH - Landily=ZH - Landily 
 
 Game is Paused=Pauza
 Return to Game=Kontynuuj
@@ -197,6 +194,41 @@ outro9=Dzięki za granie!
 
 outroA=Wciśnij spacje by kontynuować.
 
+intro1k=Daleko w innej krainie znajduje się
+intro2k=miejsce, w którym żyją Kulkisy.
+
+intro3k=Są to małe stworzenia pozbawione kończyn,
+intro4k=o kształcie kulki z twarzą, które radzę sobie
+intro5k=tylko i wyłącznie przy pomocy siły ich umysłów.
+
+intro6k=Pewnego razu młody Kulkis zapuścił się
+intro7k=do ciemnej, mrocznej i przerażającej jaskini.
+
+intro8k=Nie widząc za wiele, wpadł do głębokiej przepaści,
+intro9k=by po chwili uderzyć z impetem w jej dno...
+
+introAk=...ups, to były kolce!
+
+introBk=Powodzenia w ultra trudnym
+introCk=i niesprawiedliwym trybie Kaizo!
+
+outro1k=Zrobiono Cię z dużo twardszego
+outro2k=budulca niż innych.
+
+outro3k=Wygląda na to, że jesteś jedną z tych osób,
+outro4k=które chcą by świat robił im krzywdę
+
+outro5k=tylko po to by udowodnić,
+outro6k=że są w stanie przetrwać najgorsze.
+
+outro7k=GRATULACJE!
+
+outro8k=Udało Ci się pokonać tryb Kaizo!
+
+outro9k=Dzięki za granie!
+
+outroAk=Wciśnij spacje by kontynuować.
+
 Start Warning=Kiedy wybierzesz tą opcję\nnie będziesz mógł kontynuować\nod ostatnio zagranego etapu!
 Continue Warning=Kontynuuj grę od ostatnio zagranego\netapu z wyzerowanymi punktami.
 Click loses progress=Wybranie tej opcji spowoduje utratę\nczęści lub całości dokonań.
@@ -212,3 +244,5 @@ choseLanguage=Wybierz język:
 
 Walkthrough=Solucja
 helpTooltip=(English Only)\nGet help for the currently\nplayed level on Retrocade.net
+
+loading=Wczytywanie

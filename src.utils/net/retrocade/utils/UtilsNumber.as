@@ -29,6 +29,14 @@ package net.retrocade.utils {
             return initial;
         }
 
+        public static function approachStep(initial:Number, target:Number, step:Number = 0.1):Number{
+            if (initial < target){
+                return limit(initial + step, initial, target);
+            } else {
+                return limit(initial - step, target, initial);
+            }
+        }
+
         /**
          * Calculates the distance, using the Pythagorean theorem
          *

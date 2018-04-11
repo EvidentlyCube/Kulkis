@@ -1,55 +1,55 @@
 package game.display {
-	import flash.display.BitmapData;
+import flash.display.BitmapData;
 
-	import net.retrocade.retrocamel.components.RetrocamelUpdatableObject;
-	import net.retrocade.retrocamel.display.layers.RetrocamelLayerFlashBlit;
+import net.retrocade.retrocamel.components.RetrocamelUpdatableObject;
+import net.retrocade.retrocamel.display.layers.RetrocamelLayerFlashBlit;
 
-	public class rAnimSprite extends RetrocamelUpdatableObject {
-		private var _gfxes:Array = [];
+public class rAnimSprite extends RetrocamelUpdatableObject {
+    private var _gfxes:Array = [];
 
-		private var _x:Number;
-		private var _y:Number;
+    private var _x:Number;
+    private var _y:Number;
 
-		public var animSpeed:Number;
-		private var _drawTo:RetrocamelLayerFlashBlit;
+    public var animSpeed:Number;
+    private var _drawTo:RetrocamelLayerFlashBlit;
 
-		private var _timer:Number = 0;
-		private var _currentFrame:Number = 0;
+    private var _timer:Number = 0;
+    private var _currentFrame:Number = 0;
 
-		public var onFinishCallback:Function;
+    public var onFinishCallback:Function;
 
-		public function rAnimSprite(x:Number, y:Number, animationSpeed:Number, drawTo:RetrocamelLayerFlashBlit) {
-			_x = x;
-			_y = y;
+    public function rAnimSprite(x:Number, y:Number, animationSpeed:Number, drawTo:RetrocamelLayerFlashBlit) {
+        _x = x;
+        _y = y;
 
-			animSpeed = animationSpeed;
+        animSpeed = animationSpeed;
 
-			_drawTo = drawTo;
+        _drawTo = drawTo;
 
-			addDefault();
-		}
+        addDefault();
+    }
 
-		public function addFrame(frame:BitmapData):void {
-			_gfxes.push(frame);
-		}
+    public function addFrame(frame:BitmapData):void {
+        _gfxes.push(frame);
+    }
 
-		override public function update():void {
-			_timer++;
-			if (_timer >= animSpeed) {
-				_currentFrame++;
-				if (_currentFrame == _gfxes.length) {
-					if (onFinishCallback != null)
-						onFinishCallback();
+    override public function update():void {
+        _timer++;
+        if (_timer >= animSpeed) {
+            _currentFrame++;
+            if (_currentFrame == _gfxes.length) {
+                if (onFinishCallback != null)
+                    onFinishCallback();
 
-					_drawTo.blit(_gfxes[_currentFrame - 1], _x, _y);
-					nullifyDefault();
-					return;
-				}
+                _drawTo.blit(_gfxes[_currentFrame - 1], _x, _y);
+                nullifyDefault();
+                return;
+            }
 
-				_timer = 0;
-			}
+            _timer = 0;
+        }
 
-			_drawTo.blit(_gfxes[_currentFrame], _x, _y);
-		}
-	}
+        _drawTo.blit(_gfxes[_currentFrame], _x, _y);
+    }
+}
 }
