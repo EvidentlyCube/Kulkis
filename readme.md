@@ -4,7 +4,7 @@
 
 Kulkis is an arcade game about a ball bouncing up'n'down and destroying colorful blocks. It's a fun coffee-breaker that can be completed in a single sitting.
 
-This repository contains the freely available source code and assets for the game by [Evidently Cyue](https://www.evidentlycube.com) (formerly Retrocade.net).
+This repository contains the freely available source code and assets for the game by [Evidently Cube](https://www.evidentlycube.com) (formerly Retrocade.net).
 
 # General info
 
