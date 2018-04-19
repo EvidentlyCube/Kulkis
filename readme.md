@@ -15,7 +15,7 @@ This repository contains the freely available source code and assets for the gam
  * **First release date:** Apr 19, 2011
  * **Play the game:** 
    * **Web (flash):** https://evidentlycube.itch.io/kulkis
-   * **Desktop (WIN):** https://evidentlycube.itch.io/kulkis\
+   * **Desktop (WIN):** https://evidentlycube.itch.io/kulkis
  * **Homepage:** https://www.evidentlycube.com/games/kulkis
  * **Opensoure resources:** hhttps://www.evidentlycube.com/open-source/kulkis
  * **License:**
