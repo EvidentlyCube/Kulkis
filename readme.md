@@ -4,7 +4,7 @@
 
 Kulkis is an arcade game about a ball bouncing up'n'down and destroying colorful blocks. It's a fun coffee-breaker that can be completed in a single sitting.
 
-This repository contains the freely available source code and assets for the game by [Retrocade.net](http://retrocade.net).
+This repository contains the freely available source code and assets for the game by [Evidently Cyue](https://www.evidentlycube.com) (formerly Retrocade.net).
 
 # General info
 
@@ -13,28 +13,31 @@ This repository contains the freely available source code and assets for the gam
  * **Title**: Kulkis
  * **Technology:** ActionScript 3.0, Flash
  * **First release date:** Apr 19, 2011
- * **Play the game:** http://retrocade.net/game/kulkis/
- * **Opensoure resources:** http://retrocade.net/open-art/kulkis/
+ * **Play the game:** 
+   * **Web (flash):** https://evidentlycube.itch.io/kulkis
+   * **Desktop (WIN):** https://evidentlycube.itch.io/kulkis\
+ * **Homepage:** https://www.evidentlycube.com/games/kulkis
+ * **Opensoure resources:** hhttps://www.evidentlycube.com/open-source/kulkis
  * **License:**
    * **Source code:** [MIT](https://opensource.org/licenses/MIT)
    * **Levels:** [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode)
    * **Art:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/legalcode)
-   * **Music:** Copyright "XTD / MYSTIC" and "Facet (Martijn van MEEL)" 
+   * **Music:** [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) by [RoccoW](http://freemusicarchive.org/music/RoccoW/)
  * **Who to credit:**
-   * **Source Code:** Retrocade.net
-   * **Art:** Aleksander Kowalczyk, Retrocade.net
+   * **Source Code:** Evidently Cube
+   * **Art:** Aleksander Kowalczyk, Evidently Cube
 
 ## Licensing
 
 File LICENSE.txt contains the actual body of the license for Source Code, Artworks and Sound Effects for the project. If any text file is licensed by someone else in a different manner the text of the license will be at the top of the file. Non-text file licenses are presented in a format `<filename>.<extension>.LICENSE.txt`, eg. `music.mp3.LICENSE.txt`. Alternatively `LICENSE.txt` might exist in a directory - in this case this license covers the whole contents of the directory and its subdirectories. 
 
-## Supporting Retrocade.net
+## Supporting Evidently Cube
 
-If this project taught you something new, was useful in any way or generally you want to support Retrocade.net or thank us for our work you can find more information on [this page](http://retrocade.net/how-to-support-retrocade-net/).
+The simplest way is to either donate to this project via [Itch.io](https://evidentlycube.itch.io/kulkis) or donate/buy any of our [other projects](https://evidentlycube.itch.io/).
 
 ## More Projects
 
-Retrocade.net is at the slow process of releasing the source code and graphical assets of almost all of their old projects. If you're interested in other games please visit [this page](http://retrocade.net/open-art/).
+Evidently Cube is at the slow process of releasing the source code and graphical assets of almost all of their old projects. If you're interested in other games please visit [this page](https://www.evidentlycube.com/open-source/archive).
 
 ## File Formats
 
